@@ -55,3 +55,7 @@ python3 mit-program.py
 ```
 Her afvikler python programmet i filen og stopper derefter.
 En typisk fejl er at glemme om man befinder sig "inde i python" eller udenfor.
+
+### if og if - else og if elif else
+![If-elif-else](https://images.ctfassets.net/wp1lcwdav1p1/3fr1rXjNZpGvfNtcL1uSo6/bbfd296116c1ed779f7aff0434d536a0/Elif_statement.png)
+
