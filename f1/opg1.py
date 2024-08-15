@@ -14,6 +14,9 @@ if x == 1:
     print('kanin')
 print('dyr')
 
-# opgave 1 svar uden at køre programmet - hvad udskriver dette program? 
-# opgave 2 ret en variabel i programmet så det skriver hund - hest - kanin - dyr
-# opgave 3 indsæt en linje kode så programmet skriver kat - hund - hest - kanin - dyr
+"""" Opgaver
+- Svar uden at køre programmet - hvad udskriver dette program? 
+- Ret en variabel i programmet så det skriver hund - hest - kanin - dyr
+- Giv en af variablerne en ny værdi så programmet skriver kat - hund - hest - kanin - dyr (tip: indsæt en  linje)
+"""
+
