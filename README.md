@@ -1,2 +1,2 @@
 # progb
-Material for programming B at Slotshaven
+Materiale til faget Programming B på Slotshaven Gymnasium.
