@@ -1,4 +1,4 @@
-# Velkommen til programmering B!
+# Velkommen til programmering B !!!
 
 Vi bruger Python til at lære programmering.  
 Python 3.1.12 er den nuværende version.
