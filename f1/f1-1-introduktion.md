@@ -59,3 +59,73 @@ En typisk fejl er at glemme om man befinder sig "inde i python" eller udenfor.
 ### if og if - else og if elif else
 ![If-elif-else](https://images.ctfassets.net/wp1lcwdav1p1/3fr1rXjNZpGvfNtcL1uSo6/bbfd296116c1ed779f7aff0434d536a0/Elif_statement.png)
 
+### Variable
+Hvad er en variabel? Vi kender dem måske fra matematik, når vi beregner resultat af en funktion.
+```
+y = f(x)
+```
+Her giver vi y værdien af en funktion som får værdien x som inddata.
+
+i python skriver vi fx
+```
+skole = "Slotshaven"
+klasse = "2r"
+elev_antal = 11
+htx = True
+hhx = False
+```
+
+En variabel er altså "et navn med en værdi". Navnet kan ikke ændre sig. En variabel hedder altid det samme.
+Hvis den hedder noget andet, er det en anden variabel. Værdien derimod - den er kan ændre sig.
+
+```
+elev_antal = 11
+print(elev_antal) // skriver 11
+elev_antal = 10 // Nogen er kommet for sent
+print(elev_antal) // skriver 10
+```
+
+Variable har typer. Typer kan være simple eller komplekse. 
+Vi begynder med simple typer:
+
+- streng (tekst)
+- integer (heltal)
+- boolean (sandt eller falsk)
+
+De komplekse typer er primært lister af forskellig art. 
+
+Eksempel på liste
+```
+elever = ['anna', 'peter', 'michael', 'sofie']
+```
+
+Det er meget vigtigt at vide hvilken type en variabel har, da det har betydning for
+hvilke operationer som man kan udføre med variablen.
+
+```
+# streng - ok
+navn = 'anna'
+navn = navn.capitalize() # Anna
+
+# heltal - ikke ok
+navn = 15
+navn = navn.capitalize() # ERROR!
+# AttributeError: 'int' object has no attribute 'capitalize'
+```
+
+### Loops med range()
+```
+for i in range(10):
+  print(i)
+
+for i in range(3, 13):
+  print(i)
+
+for i in range(25, 10, -2):
+  print(i)
+
+for i in range(0, 20, 2):
+  print(i)
+```
+
+Find tekst med nem gennemgang af Python for begyndere.
