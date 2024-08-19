@@ -38,8 +38,17 @@ for kodesprog in ('python', 'c#', 'html'):
 
 # hov - hvorfor virker sidste eksempel ikke som forventet? 
 
-"""" Opgaver
-- udskriv en liste af tal fra 1-50 - sæt en stjerne ved siden af tallet hvis det er et primtal. Tip: brug liste med primtal
-og if-blok og liste-funktionen "in"
+# %%
+for i in range(50):
+  if i % 5 == 0:
+    print(i, " kan divideres med 5")
 
+# Der er en fejl i ovenstående - kan I se den? 
+
+"""" Opgaver
+- udskriv en liste af tal 1-50 - sæt en stjerne ved siden af tallet hvis det er et primtal. Tip: brug liste med primtal
+og if-blok og liste-funktionen "in"
+- udskriv en liste af tallene 1-50 med tallet selv og produktet (2.potens - slå det op)
 """
+
+# %%

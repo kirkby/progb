@@ -21,7 +21,7 @@ IDE er et akronym for Integrated Development Environment. Altså, en kodeeditor,
 Vi bruger VS Code som er en IDE fra Microsoft.
 
 ### CLI
-CLI betyder *command line interface* og er et andet meget brugt TLA..
+CLI betyder *command line interface* og er et andet meget brugt TLA.
 
 (Joke: IT-verdenen er fuld af akronymer - der er så mange at man har opfundet begrebet TLA = Three Letter Acronym.)
 
@@ -38,6 +38,9 @@ så arbejder vi med Python i CLI.
 De tegn som står i begyndelsen af linjen, fx `>>>`, kaldes i øvrigt en prompt. 
 
 Man kan konfigurere sin prompt så den ser ud som man ønsker. Fx kan den vise klokken eller eller ens brugernavn. 
+
+
+
 
 ### Python CLI
 Hvis man skriver 
@@ -57,6 +60,9 @@ Her afvikler python programmet i filen og stopper derefter.
 En typisk fejl er at glemme om man befinder sig "inde i python" eller udenfor.
 
 ### if og if - else og if elif else
+
+
+
 ![If-elif-else](https://images.ctfassets.net/wp1lcwdav1p1/3fr1rXjNZpGvfNtcL1uSo6/bbfd296116c1ed779f7aff0434d536a0/Elif_statement.png)
 
 ### Variable
@@ -114,6 +120,16 @@ navn = navn.capitalize() # ERROR!
 ```
 
 ### Loops med range()
+
+Funktionen [`range()`](https://docs.python.org/3.12/tutorial/controlflow.html#the-range-function) er et loop, altså en kontrolstruktur som udfører en løkke. 
+Den gentager altså blokken der følger efter så mange gange som man beder den om. 
+Antallet af gentagelser kaldes også iterationer. 
+
+Den tager tre parametre - start, slut og hop (_increment_ eller _step_).
+Man behøver kun det slut-parameteret hvis man bare vil tælle op et tal ad gangen.
+I det tilfælde er start lig med 0 og hop lig med 1 (første eksempel).
+Det vil sige at funktionen har default-værdier for start og hop (nemlig 0 og 1), hvis man ikke angiver nogle værdier.
+
 ```
 for i in range(10):
   print(i)
@@ -128,4 +144,25 @@ for i in range(0, 20, 2):
   print(i)
 ```
 
-Find tekst med nem gennemgang af Python for begyndere.
+Denne funktion er praktisk hvis man på forhånd kender antallet af iterationer eller skal bruge en liste af tal. 
+
+### Loops med simple lister
+
+
+
+```
+for kodesprog in ('python', 'c#', 'html'):
+  print(kodesprog)
+
+for kodesprog in ('python', 'c#', 'html'):
+  print(kodesprog.upper())
+
+kodesprog = ('python', 'c#', 'html')
+for i in range(3):
+  print(kodesprog[i])
+
+for kodesprog in ('python', 'c#', 'html'):
+  # Vi vil kun have python
+  if kodesprog == "Python":
+    print(kodesprog)
+```    

@@ -3,9 +3,9 @@
 (b) if: else:
 (c) if: elif: else: """
 
-x = 1 # giv x værdien 1
-alder  = 17 
-if x > 18:
+# x = 1 # giv x værdien 1
+alder  = 100
+if alder > 18:
   print('Du kan tage kørekort')
 else: 
    print('Du er ikke gammel nok til at tage kørekort') 
