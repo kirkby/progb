@@ -7,42 +7,44 @@ Python 3.1.12 er den nuværende version.
 Vi skal lære om:
 
 - indrykning (indentation)
-- blokke (blocks)
-- kontrolstrukturer ()
-- løkker (loops)
+- blokke
+- simple datatyper som heltal, tekst og sand-falsk
+- simple test som if, if-else og if-elif-else
+- løkker (loops) med for-in, range()
+- lister - som fx `[1, 2, 3]`
 
-Vi skal bruge følgende værktøjer:
+Vi skal bruge følgende værktøjer og programmer:
 
 - en kodeeditor (IDE)
 - en kommandolinje (CLI)
+- Python 3
 
-### IDE
-IDE er et akronym for Integrated Development Environment. Altså, en kodeeditor, det program som vi skriver vores programmer i.
-Vi bruger VS Code som er en IDE fra Microsoft.
+&#x24D8; **IDE** er et akronym for _Integrated Development Environment_. Altså, en kodeeditor, det program som vi skriver vores programmer i. Vi bruger VS Code som er en IDE fra Microsoft.
 
-### CLI
-CLI betyder *command line interface* og er et andet meget brugt TLA.
+&#x24D8; **CLI** betyder *command line interface* (altså kommandolinjegrænseflade) og er et andet meget brugt _TLA_.
 
-(Joke: IT-verdenen er fuld af akronymer - der er så mange at man har opfundet begrebet TLA = Three Letter Acronym.)
+Joke: hvad er et [TLA](https://en.wikipedia.org/wiki/)?
 
+### VS Code
+Som en snedker har sit træværktøj, har du din kodeeditor. Brug tid på at lære den at kende!  Se fx [denne video](
+https://code.visualstudio.com/docs/introvideos/productivity) med tips og tricks.
+Eller [denne her](
+https://code.visualstudio.com/docs/introvideos/configure) om temaer.
 
-Det betyder at man skriver kommandoer på en kommandolinjen. 
+⚠️ Om et par måneder skal du som minimum kende denne genvej <kbd>Space</kbd> + <kbd>Ctrl</kbd> + <kbd>P</kbd> (Mac: <kbd>Shift</kbd> + <kbd>&#x2318;</kbd> + <kbd>P</kbd>) - den giver direkte adgang til ALT hvad man kan i VS Code. Prøv den nu.
+
+### Python CLI
+Når man arbejder med på kommandolinje, betyder det at man skriver kommandoer på en kommandolinje. 
 Eksempel: når vi skriver 
 
-~~~
+```
 >python3 main.py
-~~~
+```
 
 så arbejder vi med Python i CLI.
 
 De tegn som står i begyndelsen af linjen, fx `>>>`, kaldes i øvrigt en prompt. 
 
-Man kan konfigurere sin prompt så den ser ud som man ønsker. Fx kan den vise klokken eller eller ens brugernavn. 
-
-
-
-
-### Python CLI
 Hvis man skriver 
 ```
 python3
@@ -59,110 +61,186 @@ python3 mit-program.py
 Her afvikler python programmet i filen og stopper derefter.
 En typisk fejl er at glemme om man befinder sig "inde i python" eller udenfor.
 
-### if og if - else og if elif else
-
-
-
-![If-elif-else](https://images.ctfassets.net/wp1lcwdav1p1/3fr1rXjNZpGvfNtcL1uSo6/bbfd296116c1ed779f7aff0434d536a0/Elif_statement.png)
-
 ### Variable
 Hvad er en variabel? Vi kender dem måske fra matematik, når vi beregner resultat af en funktion.
 ```
 y = f(x)
 ```
-Her giver vi y værdien af en funktion som får værdien x som inddata.
+Her beregner vi funktionen af `x` og gemmer værdien som `y`.
 
 i python skriver vi fx
-```
-skole = "Slotshaven"
-klasse = "2r"
-elev_antal = 11
+``` python
+school = "Slotshaven"
+classname = "2r"
+student_count = 11
 htx = True
 hhx = False
 ```
 
 En variabel er altså "et navn med en værdi". Navnet kan ikke ændre sig. En variabel hedder altid det samme.
-Hvis den hedder noget andet, er det en anden variabel. Værdien derimod - den er kan ændre sig.
+Hvis den hedder noget andet, er det en anden variabel. Værdien derimod - den kan ændre sig.
 
-```
-elev_antal = 11
-print(elev_antal) // skriver 11
-elev_antal = 10 // Nogen er kommet for sent
-print(elev_antal) // skriver 10
+``` python
+student_count = 11
+print(student_count) // 11
+student_count = 10 // Nogen er kommet for sent
+print(student_count) // 10
 ```
 
-Variable har typer. Typer kan være simple eller komplekse. 
-Vi begynder med simple typer:
+Variabler har _datatyper_. Typer kan være simple eller komplekse. 
+Vi begynder med de simple typer:
 
 - streng (tekst)
 - integer (heltal)
 - boolean (sandt eller falsk)
 
-De komplekse typer er primært lister af forskellig art. 
+De komplekse typer er fx lister af forskellig art, men det kommer vi til.
 
-Eksempel på liste
+``` python
+age = 11 # heltal (integer)
+name = "Peter" # tekst (string) 
+is_htx = True # sandt/falsk (boolean)
+has_car = False # do.
 ```
-elever = ['anna', 'peter', 'michael', 'sofie']
-```
+Som programmør er det dog meget vigtigt at vide hvilken type en variabel har, da det har betydning for hvilke operationer som man kan udføre med variablen.
 
-Det er meget vigtigt at vide hvilken type en variabel har, da det har betydning for
-hvilke operationer som man kan udføre med variablen.
+Man kan komme galt afsted hvis man ikke har styr på det.
 
-```
-# streng - ok
-navn = 'anna'
-navn = navn.capitalize() # Anna
+``` python
 
-# heltal - ikke ok
-navn = 15
-navn = navn.capitalize() # ERROR!
+# name er et heltal - hvilket er underligt men ok ...
+name = 15
+# men dette er ikke okay ...
+name = name.capitalize() # ERROR!
 # AttributeError: 'int' object has no attribute 'capitalize'
 ```
+Man kan ikke gøre et heltal til et stort bogstav.
+
+Men man må gerne skifte en variabel type - Python er ligeglad - men lad være med det.
+
+``` python
+name = 15 
+name = 'anna' # nu er name faktisk et navn
+name = name.capitalize() # Anna
+```
+
+&#x24D8; Datatyper er et MEGET vigtigt begreb i programmering, men det er også et meget stort emne så det vender vi tilbage til.
+
+
+### if og if-else og if-elif-else
+
+`if` og dens varianter er måske den mest basale alle såkaldte kontrolstrukturer - den bestemmer hvilken 
+retning programmet skal løbe i. Det gør den ved at afgøre sandhedsværdien i en given test. 
+
+``` python
+name = "Peter"
+if name = "Peter":
+    print("Hej Peter") # Hej Peter
+```
+Testen afgører om variablen `name` er sat til "Peter" - hvilket jo enten sandt eller falsk.
+Men hvad skal der ske hvis navnet ikke er "Peter"?
+Så bruger man `else` - det bliver udført hvis testen evaluerer til falsk.
+
+
+``` python
+name = "Peter"
+if name = "Peter":
+    print("Hej Peter") # Hej Peter
+else:
+    print("Hej X") # Du hedder ikke Peter
+
+```
+`else` er altså det som sker, hvis alt andet er falsk - det er en slags default.  
+Hvis der også er en Søren, kan man bruge "else-if" som i Python hedder `elif`.
+
+``` python
+name = "Henrik"
+if name = "Peter":
+    print("Hej Peter") # navnet er Peter
+elif name = "Søren":
+    print("Hej Søren") # navnet er Søren
+else:
+    print("Hej X") # Du hedder hverken Peter eller Søren
+
+```
+Nu har vi altså to tests og en default. Det ser sådan ud:
+
+![If-elif-else](../images/if-elif-else.png)
+
+
+Bemærk at rækkefølgen af tests har betydning. Betragt:
+
+``` python
+age = 19
+if age > 18
+    print("Du er gammel nok til kørekort") 
+elif age > 90 # bliver aldrig sand - hvorfor?
+    print("Du er for gammel til kørekort") 
+else:
+    print("Du er for ung til kørekort")
+```
+Tænk over hvorfor test 1 og 2 bør skifte rækkefølge.
+
 
 ### Loops med range()
 
 Funktionen [`range()`](https://docs.python.org/3.12/tutorial/controlflow.html#the-range-function) er et loop, altså en kontrolstruktur som udfører en løkke. 
 Den gentager altså blokken der følger efter så mange gange som man beder den om. 
-Antallet af gentagelser kaldes også iterationer. 
+Antallet af gentagelser kaldes også _iterationer_. 
 
 Den tager tre parametre - start, slut og hop (_increment_ eller _step_).
-Man behøver kun det slut-parameteret hvis man bare vil tælle op et tal ad gangen.
+Men - hvis man bare vil tælle op et tal ad gangen, behøver man kun et parameter - nemlig slut-parameteret.
 I det tilfælde er start lig med 0 og hop lig med 1 (første eksempel).
 Det vil sige at funktionen har default-værdier for start og hop (nemlig 0 og 1), hvis man ikke angiver nogle værdier.
 
-```
+``` python
 for i in range(10):
-  print(i)
+  print(i) # 0 1 2 3 osv. op til 9
 
 for i in range(3, 13):
-  print(i)
-
-for i in range(25, 10, -2):
-  print(i)
+  print(i) # 3 4 5 osv op til 12
 
 for i in range(0, 20, 2):
-  print(i)
+  print(i) # 0 2 4 6 .. op til 18
+
+for i in range(25, 10, -2):
+  print(i) # 25 23 21 19 17 15 13 11
 ```
 
-Denne funktion er praktisk hvis man på forhånd kender antallet af iterationer eller skal bruge en liste af tal. 
+> &#x24D8; What!? `range(10)` tæller fra 0 til 9! Bemærkede I det? Dataloger er underlige når de tæller - de begynder med 0. Lev med det indtil videre.
+
+Konklusion: `range()`-funktionen er praktisk hvis man på forhånd kender antallet af iterationer eller skal bruge en liste af tal. 
 
 ### Loops med simple lister
+Derudover er loops med lister med strukturen `for-in`.
 
+Den har formen `for X in LISTE:` hvor `for` og `in` er reserverede ord.
+X er en variabel som får værdien af et nyt element i listen for hver gang vi gentager løkken.
 
+``` python
+for code in ('python', 'c#', 'html'):
+  print(code) # python c# html
 
-```
-for kodesprog in ('python', 'c#', 'html'):
-  print(kodesprog)
-
-for kodesprog in ('python', 'c#', 'html'):
-  print(kodesprog.upper())
-
-kodesprog = ('python', 'c#', 'html')
-for i in range(3):
-  print(kodesprog[i])
-
-for kodesprog in ('python', 'c#', 'html'):
+for code in ('python', 'c#', 'html'):
   # Vi vil kun have python
-  if kodesprog == "Python":
-    print(kodesprog)
+  if code == "Python":
+    print(code) # python
+
+code = ('python', 'c#', 'html')
+# Man kan også tælle sig igennem en liste.
+for i in range(3):
+  print(code[i]) 
 ```    
+
+### Reserverede ord
+Programmeringssprog har _reserverede ord_. Det er ord som programmøren  ikke må bruge som variabelnavne. 
+
+Andre reserverede ord i Python er fx
+``` python
+for in if elif else True False
+```
+
+I Python må man ikke kalde sin liste for `list`. Kan I regne ud hvorfor? 
+
+&#x261E; Det er en datatype.
+
