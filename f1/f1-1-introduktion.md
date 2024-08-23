@@ -244,3 +244,59 @@ I Python må man ikke kalde sin liste for `list`. Kan I regne ud hvorfor?
 
 &#x261E; Det er en datatype.
 
+### Operationer på lister
+
+Der er en række basale ting som ofte gerne vil gøre med en liste: tilføje, fjerne, opdele osv. 
+
+Man kan tilføje elementer til en liste med `append()`.
+``` python
+students = ('Peter', 'Anna', 'Pernille')
+students.append('Henrik') # tilføj Henrik
+```
+
+Man kan fjerne elementer til en liste med `remove()`.
+``` python
+students = ('Peter', 'Anna', 'Pernille')
+students.remove('Peter') # fjern Peter
+```
+
+Man kan tilgå listens enkelte elementer via dets _indeks_. 
+Indeks angives i kantede parenteser, altså `[]`.
+
+Sådan finder man fx det første og sidste element i en liste.
+``` python
+students = ('Peter', 'Anna', 'Pernille')
+first = students[0] # Peter
+last = students[-1] # Pernille
+```
+En meget anvendt og kraftfuld på lister er _splice_, eller deling, af lister.
+Hertil bruger man `[:]`.
+Vi kan dele listen i drenge og piger således:
+``` python
+students = ('Peter', 'Anna', 'Pernille')
+boys = students[:1]
+girls = students[1:]
+```
+Hvad skete der lige der? Dette er Python-magi. 
+Man kan udrette meget med `[:]`.
+
+En underlig ting er kopiering af lister - det gøres den tomme parentes, således:
+``` python
+students = ('Peter', 'Anna', 'Pernille')
+copy_of_student = students[:]
+```
+
+Længden af en liste findes med `len()`.
+``` python
+num_students = len(students)
+```
+
+Sortering sker med `sort()`.
+``` python
+sort_students = sort(students)
+```
+
+
+
+### join() og split()
+TODO
