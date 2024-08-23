@@ -325,7 +325,25 @@ code_languages = ['python', 'c#', 'html']
 # Man kan også tælle sig igennem en liste via indeks.
 for i in range(3):
   print(code_languages[i]) 
-```    
+```
+
+### test med lister
+
+Ofte vil man gerne vide om en liste indeholder et bestemt element.
+Det kan gøres nemt med `if` og `in`.
+
+``` python
+languages = ['python', 'c#', 'html']
+if 'python' in languages:
+  print('vi har python i vores liste!')
+
+numbers = [1, 3, 5, 7, 9]
+if 3 in numbers:
+  print('3 fundet') 
+
+```
+
+
 
 ### Reserverede ord
 Programmeringssprog har _reserverede ord_. Det er ord som programmøren  ikke må bruge som variabelnavne. 
