@@ -211,23 +211,118 @@ for i in range(25, 10, -2):
 
 Konklusion: `range()`-funktionen er praktisk hvis man på forhånd kender antallet af iterationer eller skal bruge en liste af tal. 
 
-### Loops med simple lister
-Derudover er loops med lister med strukturen `for-in`.
+Der er andre typer loops - men først kigger vi lige på lister.
+
+## Lister
+Lister er en helt grundlæggende struktur i programmering. I andre sprog kaldes de også _arrays_.
+
+I python er der fire forskellige typer lister:
+- liste (_list_)
+- sæt (_set_)
+- tupel (_tuple_)
+- dictionaries
+
+For nu koncenterer vi os om den første type og glemmer de andre et stykker tid.
+
+Vi begynder med lister først. En liste kan kendes på sine kantede parenteser.
+```
+students = ['Peter', 'Anna', 'Pernille']
+```
+
+
+### Operationer på lister
+
+Der er en række basale ting som ofte gerne vil gøre med en liste: tilføje, fjerne, opdele osv. 
+
+Man kan tilføje elementer til en liste med `append()`.
+``` python
+students = ['Peter', 'Anna', 'Pernille'
+students.append('Henrik') # tilføj Henrik
+```
+
+Man kan fjerne elementer til en liste med `remove()`.
+``` python
+students = ['Peter', 'Anna', 'Pernille'
+students.remove('Peter') # fjern Peter
+```
+
+Man kan tilgå listens enkelte elementer via dets _indeks_. 
+Indeks angives i kantede parenteser, altså `[]`.
+
+Sådan finder man fx det første og sidste element i en liste.
+``` python
+students = ['Peter', 'Anna', 'Pernille']
+first = students[0] # Peter
+last = students[-1] # Pernille
+```
+
+En meget anvendt og kraftfuld på lister er _splice_, eller deling, af lister.
+Hertil bruger man `[:]`, _the splice operator_.
+Vi kan dele listen i drenge og piger således:
+``` python
+students = ['Peter', 'Anna', 'Pernille']
+boys = students[0:1] # Peter
+girls = students[1:2] # Anna Pernille
+```
+
+Forklaring på slice-operatoren:
+> The slice operator [n:m] returns the part of the string starting with the character at index n and go up to but not including the character at index m.
+
+I `[n:m]` refererer `n` og `m` altså til listens indeks. MEN - den begynder
+med indeks `n` og tæller op til `m` _men tager ikke tegnet på indeks m med!_
+
+Hvis man udelader et indeks, betyder det hhv. fra begyndelsen af listen eller til slutningen af listen.
+Derfor får vi 
+``` python
+students = ['Peter', 'Anna', 'Pernille']
+# Fra begyndelsen af listen til men ikke med indeks 1!
+boys = students[:1] # Peter
+# Fra indeks 1 til slutningen af listen
+girls = students[1:] # Anna Pernille
+```
+
+Hvad skete der lige der? Dette er Python-magi. 
+Man kan udrette meget med `[:]`.
+
+
+En underlig ting er **kopiering** af lister - det gøres med den tomme parentes, således:
+``` python
+students = [Peter', 'Anna', 'Pernille']
+copy_of_student = students[:]
+```
+
+Længden af en liste findes med `len()`.
+``` python
+num_students = len(students)
+```
+
+Sortering sker med `sort()`.
+``` python
+students.sort()
+```
+
+Vi kan også vende den om.
+``` python
+students.reverse()
+```
+
+### Loops igen - nu med lister
+Lad os kigge på loops igen - nu med lister. Vi looper igennem lister med strukturen `for-in`.
 
 Den har formen `for X in LISTE:` hvor `for` og `in` er reserverede ord.
 X er en variabel som får værdien af et nyt element i listen for hver gang vi gentager løkken.
 
 ``` python
-for code in ('python', 'c#', 'html'):
+for code in ['python', 'c#', 'html']:
   print(code) # python c# html
 
-for code in ('python', 'c#', 'html'):
+for code in ['python', 'c#', 'html']:
   # Vi vil kun have python
   if code == "Python":
     print(code) # python
 
-code = ('python', 'c#', 'html')
-# Man kan også tælle sig igennem en liste.
+code = ['python', 'c#', 'html']
+# Man kan også tælle sig igennem en liste via indeks.
 for i in range(3):
   print(code[i]) 
 ```    
@@ -243,60 +338,3 @@ for in if elif else True False
 I Python må man ikke kalde sin liste for `list`. Kan I regne ud hvorfor? 
 
 &#x261E; Det er en datatype.
-
-### Operationer på lister
-
-Der er en række basale ting som ofte gerne vil gøre med en liste: tilføje, fjerne, opdele osv. 
-
-Man kan tilføje elementer til en liste med `append()`.
-``` python
-students = ('Peter', 'Anna', 'Pernille')
-students.append('Henrik') # tilføj Henrik
-```
-
-Man kan fjerne elementer til en liste med `remove()`.
-``` python
-students = ('Peter', 'Anna', 'Pernille')
-students.remove('Peter') # fjern Peter
-```
-
-Man kan tilgå listens enkelte elementer via dets _indeks_. 
-Indeks angives i kantede parenteser, altså `[]`.
-
-Sådan finder man fx det første og sidste element i en liste.
-``` python
-students = ('Peter', 'Anna', 'Pernille')
-first = students[0] # Peter
-last = students[-1] # Pernille
-```
-En meget anvendt og kraftfuld på lister er _splice_, eller deling, af lister.
-Hertil bruger man `[:]`.
-Vi kan dele listen i drenge og piger således:
-``` python
-students = ('Peter', 'Anna', 'Pernille')
-boys = students[:1]
-girls = students[1:]
-```
-Hvad skete der lige der? Dette er Python-magi. 
-Man kan udrette meget med `[:]`.
-
-En underlig ting er kopiering af lister - det gøres den tomme parentes, således:
-``` python
-students = ('Peter', 'Anna', 'Pernille')
-copy_of_student = students[:]
-```
-
-Længden af en liste findes med `len()`.
-``` python
-num_students = len(students)
-```
-
-Sortering sker med `sort()`.
-``` python
-sort_students = sort(students)
-```
-
-
-
-### join() og split()
-TODO
