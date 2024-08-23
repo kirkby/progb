@@ -287,7 +287,7 @@ Man kan udrette meget med `[:]`.
 
 En underlig ting er **kopiering** af lister - det gøres med den tomme parentes, således:
 ``` python
-students = [Peter', 'Anna', 'Pernille']
+students = ['Peter', 'Anna', 'Pernille']
 copy_of_student = students[:]
 ```
 
