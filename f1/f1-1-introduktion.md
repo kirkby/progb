@@ -321,10 +321,10 @@ for code in ['python', 'c#', 'html']:
   if code == "Python":
     print(code) # python
 
-code = ['python', 'c#', 'html']
+code_languages = ['python', 'c#', 'html']
 # Man kan også tælle sig igennem en liste via indeks.
 for i in range(3):
-  print(code[i]) 
+  print(code_languages[i]) 
 ```    
 
 ### Reserverede ord
