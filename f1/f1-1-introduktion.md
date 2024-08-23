@@ -257,7 +257,7 @@ last = students[-1] # Pernille
 ```
 
 En meget anvendt og kraftfuld på lister er _splice_, eller deling, af lister.
-Hertil bruger man `[:]`, _the splice operator_.
+Hertil bruger man `[:]`, _the splice operator_. Den returnerer en _substring_, eller delstreng, af en liste.
 Vi kan dele listen i drenge og piger således:
 ``` python
 students = ['Peter', 'Anna', 'Pernille']
