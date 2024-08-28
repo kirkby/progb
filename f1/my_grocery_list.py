@@ -1,4 +1,4 @@
-grocery_list = ['Milk', 'Honey', 'Bread', 'Corn flakes']
+grocery_list = ["Milk", "Honey", "Bread", "Corn flakes"]
 help = """Help
     A: Add item
     R: Remove item
@@ -11,7 +11,7 @@ run = True
 print("*** Grocery List Manager ***")
 while run:
     choice = input(">").upper()
-    
+
     if choice == "A":
         item = input("Enter the item to add: ")
         grocery_list.append(item)
@@ -36,7 +36,7 @@ while run:
         else:
             print("The grocery list is empty, no reason to sort it.")
 
-    elif choice in ["P", ""] :
+    elif choice in ["P", ""]:
         if grocery_list:
             print("Items: ", ", ".join(grocery_list))
         else:
@@ -51,6 +51,5 @@ while run:
 
     else:
         print("Invalid choice. Please try again.")
-    
+
     print("---")
-    
