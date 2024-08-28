@@ -134,7 +134,7 @@ retning programmet skal løbe i. Det gør den ved at afgøre sandhedsværdien i 
 
 ``` python
 name = "Peter"
-if name = "Peter":
+if name == "Peter":
     print("Hej Peter") # Hej Peter
 ```
 Testen afgører om variablen `name` er sat til "Peter" - hvilket jo enten sandt eller falsk.
@@ -144,7 +144,7 @@ Så bruger man `else` - det bliver udført hvis testen evaluerer til falsk.
 
 ``` python
 name = "Peter"
-if name = "Peter":
+if name == "Peter":
     print("Hej Peter") # Hej Peter
 else:
     print("Hej X") # Du hedder ikke Peter
@@ -155,9 +155,9 @@ Hvis der også er en Søren, kan man bruge "else-if" som i Python hedder `elif`.
 
 ``` python
 name = "Henrik"
-if name = "Peter":
+if name == "Peter":
     print("Hej Peter") # navnet er Peter
-elif name = "Søren":
+elif name == "Søren":
     print("Hej Søren") # navnet er Søren
 else:
     print("Hej X") # Du hedder hverken Peter eller Søren
@@ -343,8 +343,6 @@ if 3 in numbers:
 
 ```
 
-
-
 ### Reserverede ord
 Programmeringssprog har _reserverede ord_. Det er ord som programmøren  ikke må bruge som variabelnavne. 
 
@@ -356,3 +354,24 @@ for in if elif else True False
 I Python må man ikke kalde sin liste for `list`. Kan I regne ud hvorfor? 
 
 &#x261E; Det er en datatype.
+
+### Funktioner 
+Som I måske har bemærket, bliver et program meget hurtigt uoverskueligt. Det er tid til at modularisere det.
+Det kan man gøre på flere måder. I store programmer vil man opdele koden i flere filer som man så _importerer_ i sit hovedprogram. Hvis man kalder sit hovedprogram for `main.py` og gerne vil bruge sin indkøbsliste-kode, kan man importere en fil således:
+```
+import grocery-list
+```
+Det kræver at python ved hvor koden ligger. Mere om det senere.  
+Men man begynder med at opdele sin kode i _funktioner_.
+En funktion erklæerer man i python med det reserverede ord `def`.
+```
+def add_item_to_grocery_list(item):
+  grocery_list.append(item)
+```  
+Der er en række ting at sige om en funktion så hold nu fast. 
+En funktion har eller kan have parametre.
+En funktion har en returværdi. 
+En funktion definerer sit eget virkefelt (_scope_).
+
+Variablen `item` kaldes et parameter. Det er den data som man giver til funktionen. 
+
