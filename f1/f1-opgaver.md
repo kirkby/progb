@@ -89,6 +89,24 @@ Udskriv en liste af tal fra 50-1 - men kun de ulige tal.
 Udskriv alle tal fra 1-50 men sæt en stjerne ved tallet hvis det er et primtal. Tip: definer en liste af primtal og test med den.
 
 
+## Opgave 5: indkøbsliste
+Vi skal nu forbedre vores indkøsbliste. 
+Se programmet `grocery_list.py`. 
+
+### Opgave 5A
+Lav et menupunkt som sletter hele indkøbslisten.
+Tip: Tilføj et punkt til menuen (lige inden Quit) og tilføj et punkt til den store `if-elif-else`-blok.
+Man kan slette en liste ved at sætte den til en tom liste, `liste = []`
+
+### Opgave 5B
+Lav et menupunkt som sorterer indkøbslisten.
+Tip: Tilføj et punkt til menuen (lige inden Quit) og tilføj et punkt til den store `if-elif-else`-blok.
+Man kan sortere en liste med den indbyggede sorteringsfunktion, `liste.sort()`.
+
+### Opgave 5C
+Ekstraopgave: brug bogstaver et stedet for tal til at vælge menupunkterne. 
+Fx kan man vælge (P)rint med "P". Opdater menuen og den store if-blok.
+
 
 
 
