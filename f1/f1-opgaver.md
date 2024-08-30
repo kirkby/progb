@@ -108,6 +108,17 @@ Ekstraopgave: brug bogstaver et stedet for tal til at vælge menupunkterne.
 Fx kan man vælge (P)rint med "P". Opdater menuen og den store if-blok.
 
 
+## Opgave 6: indkøbsliste og funktioner
+
+### Opgave 6A
+Skriv en funktion som du kalder `pretty_print()`. Den prenter listen pænt. Kald denne funktion alle de steder i programmet hvor listen
+bliver printet. Tip: send indkøbslisten med som parameter.
+
+### Opgave 6B
+Flyt koden i valg "1" (tilføj til liste) til en funktion. Tip: send indkøbslisten med som parameter.
+
+
+
 
 
 
