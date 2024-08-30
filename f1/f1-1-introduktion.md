@@ -401,25 +401,34 @@ def send_welcome_mail(mail):
 ```  
 I dette tilfælde har man lavet en `generel` funktion som kan sende velkomst-mails til en mail-adresse fordi man kan angive mail-adressen som et parameter til funktionen.
 
-Denne funktion printer Fibonacci-tal op til 100.
+Denne kode printer Fibonacci-tal op til 100.
 ``` python
 a, b = 0, 1
 while a < 100:
     print(a, end=' ')
     a, b = b, a+b
 ```  
-
-Hvorfor ikke gøre 100 til en parameter og lave en generel funktion?
+Men hvorfor lige tallet 100? Det er et helt tilfældigt tal. Hvorfor ikke gøre 100 til et parameter og lave en generel funktion? Lad os udskifte 100 med et parameter ved navn `limit`.
 
 ``` python
-def fib(n):
+def fib(limit):
     """Print a Fibonacci series up to n."""
     a, b = 0, 1
-    while a < n:
+    while a < limit:
         print(a, end=' ')
         a, b = b, a+b
     print()
 ```
+
+Kør denne funktion i VS Code. Men hov - den gør jo ikke noget. 
+
+Hmm, en funktion skal kaldes.
+
+``` python
+fib(25) # calling fib()
+# 0 1 1 2 3 5 8 13 21 
+```
+
 
 
 
