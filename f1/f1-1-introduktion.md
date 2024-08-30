@@ -12,6 +12,7 @@ Vi skal lære om:
 - simple test som if, if-else og if-elif-else
 - løkker (loops) med for-in, range()
 - lister - som fx `[1, 2, 3]`
+- funktioner
 
 Vi skal bruge følgende værktøjer og programmer:
 
@@ -49,8 +50,8 @@ Hvis man skriver
 ```
 python3
 ```
-i sit CLI, starter man python og kan derefter "tale med" python. 
-Det kan se på prompten som ser sådan ud: `>>>`.
+i sit CLI, starter man python og kan derefter "tale med" python. Så er man i _interactive mode_.
+Det kan ses på prompten som ser sådan ud: `>>>`. 
 
 For at afslutte "samtalen" skriv `quit()`.
 
@@ -61,7 +62,7 @@ python3 mit-program.py
 Her afvikler python programmet i filen og stopper derefter.
 En typisk fejl er at glemme om man befinder sig "inde i python" eller udenfor.
 
-### Variable
+## Variable
 Hvad er en variabel? Vi kender dem måske fra matematik, når vi beregner resultat af en funktion.
 ```
 y = f(x)
@@ -127,7 +128,7 @@ name = name.capitalize() # Anna
 &#x24D8; Datatyper er et MEGET vigtigt begreb i programmering, men det er også et meget stort emne så det vender vi tilbage til.
 
 
-### if og if-else og if-elif-else
+## if og if-else og if-elif-else
 
 `if` og dens varianter er måske den mest basale alle såkaldte kontrolstrukturer - den bestemmer hvilken 
 retning programmet skal løbe i. Det gør den ved at afgøre sandhedsværdien i en given test. 
@@ -182,7 +183,7 @@ else:
 Tænk over hvorfor test 1 og 2 bør skifte rækkefølge.
 
 
-### Loops med range()
+## Loops med range()
 
 Funktionen [`range()`](https://docs.python.org/3.12/tutorial/controlflow.html#the-range-function) er et loop, altså en kontrolstruktur som udfører en løkke. 
 Den gentager altså blokken der følger efter så mange gange som man beder den om. 
@@ -343,7 +344,7 @@ if 3 in numbers:
 
 ```
 
-### Reserverede ord
+## Reserverede ord
 Programmeringssprog har _reserverede ord_. Det er ord som programmøren  ikke må bruge som variabelnavne. 
 
 Andre reserverede ord i Python er fx
@@ -355,23 +356,77 @@ I Python må man ikke kalde sin liste for `list`. Kan I regne ud hvorfor?
 
 &#x261E; Det er en datatype.
 
-### Funktioner 
+## Funktioner 
 Som I måske har bemærket, bliver et program meget hurtigt uoverskueligt. Det er tid til at modularisere det.
-Det kan man gøre på flere måder. I store programmer vil man opdele koden i flere filer som man så _importerer_ i sit hovedprogram. Hvis man kalder sit hovedprogram for `main.py` og gerne vil bruge sin indkøbsliste-kode, kan man importere en fil således:
-```
-import grocery-list
-```
-Det kræver at python ved hvor koden ligger. Mere om det senere.  
-Men man begynder med at opdele sin kode i _funktioner_.
-En funktion erklæerer man i python med det reserverede ord `def`.
-```
+Det kan man gøre på flere måder, men vi begynder med at opdele vores kode i _funktioner_. 
+
+Der er en række ting at sige om en funktion så hold nu fast: 
+ - Man kan altid kende en funktion på parenteserne - `funktion()`. 
+ - En funktion har eller kan have parametre.
+ - En funktion har en returværdi. 
+ - En funktion definerer sit eget virkefelt (_scope_) (det vender vi tilbage til)).
+
+Uden at vide det, har vi allerede brugt funktioner - nemlig Pythons indbyggede funktioner som fx `print()`.
+Man skelner altså Pythons _egne_ funktioner - de såkaldte [_built-in functions_](https://docs.python.org/3/library/functions.html) - og de funktioner som man selv definerer.
+
+En funktion erklærer man i python med det reserverede ord `def`.
+``` python
 def add_item_to_grocery_list(item):
   grocery_list.append(item)
 ```  
-Der er en række ting at sige om en funktion så hold nu fast. 
-En funktion har eller kan have parametre.
-En funktion har en returværdi. 
-En funktion definerer sit eget virkefelt (_scope_).
+Det er som vi kender det fra Python - alt hvad der følger efter kolon (`:`) og er _indrykket_ under funktionen, er kode som tilhører funktionen. 
 
-Variablen `item` kaldes et parameter. Det er den data som man giver til funktionen. 
+Variablen `item` i ovenstående eksempel kaldes et parameter. Det er den data som man giver til funktionen.  
+Husk at funktion en funktion kan kendes ved `()` - så de skal med, selv om funktion ikke har parametre.
 
+``` python
+from datetime import date
+
+def print_date():
+    """ Denne funktion har ingen parametre """
+    today = date.today()
+    print("Today's date:", today)
+```  
+
+Funktioner er den vigtigste byggesten i programmering. Man bruger først og fremmest funktioner til "pakke kode ind" som
+skal løse små, afgrænsede problemer igen og igen. 
+
+Næste vigtige punkt er at man kan _generalisere_ løsningen på et problem ved hjælp af funktioner.
+Hvis man fx har en mail-funktion, kan man fx bruge email-adresse som parameter. 
+
+``` python
+def send_welcome_mail(mail):
+    """ Denne funktion sender en velkomst mail """
+    # send welcome mail til "mail".
+```  
+I dette tilfælde har man lavet en `generel` funktion som kan sende velkomst-mails til en mail-adresse fordi man kan angive mail-adressen som et parameter til funktionen.
+
+Denne funktion printer Fibonacci-tal op til 100.
+``` python
+a, b = 0, 1
+while a < 100:
+    print(a, end=' ')
+    a, b = b, a+b
+```  
+
+Hvorfor ikke gøre 100 til en parameter og lave en generel funktion?
+
+``` python
+def fib(n):
+    """Print a Fibonacci series up to n."""
+    a, b = 0, 1
+    while a < n:
+        print(a, end=' ')
+        a, b = b, a+b
+    print()
+```
+
+
+
+### Import
+I store programmer vil man opdele koden i flere filer som man så _importerer_ i sit hovedprogram. Hvis man gerne vil bruge sin indkøbsliste-kode, kan man importere en fil således:
+```
+import grocery-list
+```
+
+Det kræver at python ved hvor koden ligger.
