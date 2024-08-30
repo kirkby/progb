@@ -104,7 +104,7 @@ Tip: Tilføj et punkt til menuen (lige inden Quit) og tilføj et punkt til den s
 Man kan sortere en liste med den indbyggede sorteringsfunktion, `liste.sort()`.
 
 ### Opgave 5C
-Ekstraopgave: brug bogstaver et stedet for tal til at vælge menupunkterne. 
+Ekstraopgave: brug bogstaver i stedet for tal til at vælge menupunkterne. 
 Fx kan man vælge (P)rint med "P". Opdater menuen og den store if-blok.
 
 
@@ -112,10 +112,15 @@ Fx kan man vælge (P)rint med "P". Opdater menuen og den store if-blok.
 
 ### Opgave 6A
 Skriv en funktion som du kalder `pretty_print()`. Den prenter listen pænt. Kald denne funktion alle de steder i programmet hvor listen
-bliver printet. Tip: send indkøbslisten med som parameter.
+bliver prentet. Tip: 
+- opret funktionen over din `while True:`
+- kopier den kode der står i elif:-blokken til din nye funktion
+- send indkøbslisten med som parameter. 
+- Husk at fjerne den kode som du har kopieret til funktionen
+- Test at det virker ved at køre programmet 
 
 ### Opgave 6B
-Flyt koden i valg "1" (tilføj til liste) til en funktion. Tip: send indkøbslisten med som parameter.
+Flyt koden i valg "1" (tilføj til liste) til en funktion. Tip: brug principperne fra 6A
 
 
 
