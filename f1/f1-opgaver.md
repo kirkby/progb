@@ -132,6 +132,8 @@ Tredje parameter er tekst, `steering` - har den styr eller rat eller andet?
 Funktionen analyserer argumenterne og returnerer en værdi 
 - fx bil, motorcykel, cykel, knallert, ATV, lastbil.
 
+man returnerer en værdi med `return`.
+
 Hjælp: 
 ```
 def vehicle_selector(has_motor, num_wheels, wheel_type, color):
