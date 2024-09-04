@@ -125,14 +125,13 @@ Flyt koden i valg "1" (tilføj til liste) til en funktion. Tip: brug princippern
 
 ### Opgave 7
 Lav en funktion, `vehicle_selector`,  med mindst tre parametre.
-Første parameter er et heltal, `num_wheels` - antallet af hjul.
-Andet parameter er boolean, `has_motor` - har den en motor?
-Tredje parameter er tekst, `steering` - har den styr eller rat eller andet?
+Første parameter er et heltal, `num_wheels` - antallet af hjul.  
+Andet parameter er boolean, `has_motor` - har den en motor?  
+Tredje parameter er tekst, `steering` - har den styr eller rat eller andet? 
 
-Funktionen analyserer argumenterne og returnerer en værdi 
-- fx bil, motorcykel, cykel, knallert, ATV, lastbil.
+Funktionen analyserer argumenterne og returnerer en værdi, fx bil, motorcykel, cykel, knallert, ATV, lastbil.
 
-man returnerer en værdi med `return`.
+Man returnerer en værdi med `return`.
 
 Hjælp: 
 ```
