@@ -1,4 +1,6 @@
-# Velkommen til programmering B !!!
+# Introduktion til Python
+
+Programmering B, 2.r, Slotshaven Gymnasium 2024-25.
 
 Vi bruger Python til at lære programmering.  
 Python 3.1.12 er den nuværende version.
@@ -412,7 +414,6 @@ Men hvorfor lige tallet 100? Det er et helt tilfældigt tal. Hvorfor ikke gøre 
 
 ``` python
 def fib(limit):
-    """Print a Fibonacci series up to n."""
     a, b = 0, 1
     while a < limit:
         print(a, end=' ')
@@ -429,6 +430,95 @@ fib(25) # calling fib()
 # 0 1 1 2 3 5 8 13 21 
 ```
 
+Funktioner anvendes som sagt til afgrænsede, enkeltstående opgaver.
+Nogle kloge folk siger, at som udgangspunkt skal man kunne overskue hele funktionen i et skærmbillede. 
+
+### Dokumentation
+Der findes en Python-standard til dokumentation af funktioner.
+En 1-linjes tekst lige under funktionshovedet. Fx kunne vores fibonacci-funktion dokumenteres sådan her: 
+
+``` python
+def fib(limit):
+    """Print a Fibonacci series up to limit."""
+    a, b = 0, 1
+    (...)
+```
+
+
+
+### Mere om parametre
+En funktion kan selvfølgelig have mere end et parameter. Faktisk kan en funktion have et stort set uendeligt antal parametre. 
+
+Der er en dog en tommelfingerregel som  siger at hvis en funktion har flere end 3-4 parametre, så skal man overveje om ens funktion er for indviklet. 
+
+
+
+``` python
+def say_hello(greeting, title, name):
+    print(greeting, title, name)
+
+say_hello('Hej', 'hr.', 'Jensen') # Hej hr. Jensen
+say_hello('Goddag', 'fru', 'Hansen') # Goddag fru Hansen
+say_hello('Hva så', 'der, ', 'mester') # Hva så der, mester
+
+```
+
+Denne funktion kan synes lidt fjollet. Men det kunne faktisk være meget smart, hcis man senere besluttede sig for at ændre på den måde som man hilser på. Så ville man kun skulle ændre koden et sted. Vi kan fx gøre brug af Pythons indbyggede formateringsmuligheder:
+
+``` python
+def say_hello(greeting, title, name):
+    print(f"Sig {greeting} til {title} {name}") # Sig Hej til hr. Jensen
+```
+
+### Parametre eller argumenter? 
+En funktion har altså _parametre_. Et _argument_ er den værdi som man _kalder_ funktionen med.
+I eksemplet ovenfor er parametrene altså `greeting`, `title`, `name` - og "Hej", "hr.", "Jensen" de tre argumenter som funktionen bliver kaldt med.
+
+### Position eller keyword?
+Det ses i eksemplet, at rækkefølgen er vigtig. 
+Disse to funktionskald er ikke ens - prøv selv:
+
+``` python
+say_hello("Hej", "hr.", "Jensen")
+say_hello("Jensen", "hej", "hr")
+```
+Det er fordi argumenterne er _positionelle_, altså rækkefølgen er afgørende.
+Det kan man faktisk komme uden om ved at navngive sine argumenter efter parametrene: 
+
+``` python
+say_hello(name = "Jensen", greeting = "hej", title = "hr")
+```
+Det kaldes _keyword_-argumenter, eller navngivne argumenter. Det har måske ikke den store praktiske betydning lige nu. Men man skal være opmærksom på reglerne.
+
+Kombinationer af positionelle og navngivne argumenter kan hurtigt give problemer.
+``` python
+say_hello("Jensen", greeting = "hej", title = "hr")
+
+TypeError: say_hello() got multiple values for argument 'greeting'
+```
+Eller
+``` python
+say_hello("Jensen", greeting = "hej", "hr")
+SyntaxError: positional argument follows keyword argument
+```
+
+### Default-værdier
+Noget mere interessant er måske default-værdier for parametre.
+
+
+
+
+### Returværdier
+En funktion kan returnere en værdi med `return`-nøgleordet.
+
+``` python
+def say_hello(greeting, title, name):
+    print(f"Sig {greeting} til {title} {name}") # Sig Hej til hr. Jensen
+```
+
+
+
+## Import af biblioteker
 
 
 
