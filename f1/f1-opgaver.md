@@ -123,7 +123,21 @@ bliver prentet. Tip:
 Flyt koden i valg "1" (tilføj til liste) til en funktion. Tip: brug principperne fra 6A
 
 
+### Opgave 6C
 
+Lav en funktion med tre parametre.
+Først parameter er tekst - styr eller rat.
+Andet parameter er boolean - har den en motor.
+Tredje parameter er tal - antallet af hjul.
+Retur værdier bil, motorcykel, cykel, knallert, ATV, lastbil.
+
+Hjælp: 
+```
+def vehicle_selector(has_motor, num_wheels, wheel_type, color):
+  type = ""
+  if number_wheels > 2
+  return type
+```
 
 
 
