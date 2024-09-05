@@ -19,7 +19,7 @@ def determine_vehicle(num_wheels, has_motor):
 num_wheel = input("Antal hjul:")
 has_motor = input("Har den motor? (j for ja, eller nej)")
 num_wheel = int(num_wheel)
-has_motor = has_motor.lower == "j"
+has_motor = has_motor.lower() == "j"
 
 vehicle = determine_vehicle(num_wheel, has_motor)
 print("Possibilities: ", " ".join(vehicle))
