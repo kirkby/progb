@@ -64,7 +64,7 @@ python3 mit-program.py
 Her afvikler python programmet i filen og stopper derefter.
 En typisk fejl er at glemme om man befinder sig "inde i python" eller udenfor.
 
-## Variable
+## Variabler
 Hvad er en variabel? Vi kender dem måske fra matematik, når vi beregner resultat af en funktion.
 ```
 y = f(x)
@@ -225,7 +225,7 @@ I python er der fire forskellige typer lister:
 - tupel (_tuple_)
 - dictionaries
 
-For nu koncenterer vi os om den første type og glemmer de andre et stykker tid.
+For nu koncenterer vi os om den første type og glemmer de andre et stykke tid.
 
 Vi begynder med lister først. En liste kan kendes på sine kantede parenteser.
 ```
@@ -347,7 +347,7 @@ if 3 in numbers:
 ```
 
 ## Reserverede ord
-Programmeringssprog har _reserverede ord_. Det er ord som programmøren  ikke må bruge som variabelnavne. 
+Programmeringssprog har _reserverede ord_. Det er ord som programmøren ikke må bruge som variabelnavne. 
 
 Andre reserverede ord i Python er fx
 ``` python
@@ -498,29 +498,124 @@ TypeError: say_hello() got multiple values for argument 'greeting'
 ```
 Eller
 ``` python
-say_hello("Jensen", greeting = "hej", "hr")
+say_hello(name = "Jensen", greeting = "hej", "hr")
 SyntaxError: positional argument follows keyword argument
 ```
 
 ### Default-værdier
 Noget mere interessant er måske default-værdier for parametre.
 
+``` python
+def animals_greeting(greeting, first_animal = "cat", second_animal = "dog"):
+    print(f"The {first_animal} says {greeting} to the {second_animal}.")
 
+animals_greeting("hello", "bird", "mouse")
+# men også
+animals_greeting("hello") # The cat says hello to the dog
+```
+Igen er rækkefølgen vigtig: Reglen er at parametre med default-værdier skal komme efter parametre uden default-værdier.
+
+Dette går ikke:
+```python
+def animals_greeting(first_animal = "cat", second_animal, greeting):
+    # define function here
+
+SyntaxError: parameter without a default follows parameter with a default
+```
+
+Default-værdier giver mening hvis man _næsten altid_ kalder en funktion med de samme værdier - hermed fortæller man at visse værdier er normaltilfældet.
+
+``` python
+def print_document(document, all_pages = True, use_duplex = True):
+    """ By default, prints full doc as duplex """
+    # Print your document here
+
+
+print_document(document) # using default values for 2nd and 3rd argument
+```
+Det betyder, at man i de fleste tilfælde kan udelade andet og tredje argument, hvis man bare ønsker at printe _hele_ dokumentet som _duplex_.
+
+Når kalder bruger `return` så forlader eksekveringen funktionen og vender tilbage til kaldet.
 
 
 ### Returværdier
 En funktion kan returnere en værdi med `return`-nøgleordet.
 
 ``` python
-def say_hello(greeting, title, name):
-    print(f"Sig {greeting} til {title} {name}") # Sig Hej til hr. Jensen
+def calculate_age(date_of_birth):
+    """ Calculates and returns age by comparing current date with date_of_birth """
+    # Do the calculation
+    return age
+```
+
+#### Returværdien None
+
+``` python
+def pretty_print(message):
+    """ Pretty prints message """
+    print(f"Message: {message}")
+
+return_value = pretty_print("This is Public Service Announcement")
+
+print(f"Returværdi: {return_value}")
+--
+None
 ```
 
 
+#### Multiple returns
+Man kan sagtens "returnere" flere gange i samme funktion.
+
+``` python
+def determine_vehicle(num_wheels, has_motor):
+
+    if not has_motor and num_wheel == 2:
+        return ["bike"]
+
+    if has_motor and num_wheel == 2:
+        return ["mc", "scooter"]
+
+    if has_motor and num_wheel == 4:
+        return ["car", "atv"]
+
+    if has_motor and num_wheel > 4:
+        return ["truck"]
+```
+
+
+I dette eksempel returnerer vi en værdi ligeså snart vi har fundet den. Det kaldes _early return_. 
+Princippet er at man finder de nemmeste løsninger først og dermed reducerer kompleksiteten i antallet af kombinationer.
+Fordelen ved dette er at man kan holde funktionen simpel - man behøver ikke så mange betingelser og indrykninger.
+
+Der findes en modsat skole - _one exit only_ - som mener at man kun skal returnere en gang til sidst i funktionen. 
+
+Sammenlign disse eksempler:
+
+Early return
+``` python
+if (condition)
+   return 42;
+else
+   return 97;
+```
+
+"One exit point"
+``` python
+int result;
+if (condition)
+   result = 42;
+else
+   result = 97;
+return result;
+```
+
+Se også [denne tråd på StackExchange](https://softwareengineering.stackexchange.com/questions/118703/where-did-the-notion-of-one-return-only-come-from).
+
+
+Jeg foretrækker den første løsning.
+
 
 ## Import af biblioteker
-
-
 
 ### Import
 I store programmer vil man opdele koden i flere filer som man så _importerer_ i sit hovedprogram. Hvis man gerne vil bruge sin indkøbsliste-kode, kan man importere en fil således:

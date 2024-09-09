@@ -124,10 +124,10 @@ Flyt koden i valg "1" (tilføj til liste) til en funktion. Tip: brug princippern
 
 
 ### Opgave 7
-Lav en funktion, `vehicle_selector`,  med mindst tre parametre.
-Første parameter er et heltal, `num_wheels` - antallet af hjul.  
-Andet parameter er boolean, `has_motor` - har den en motor?  
-Tredje parameter er tekst, `steering` - har den styr eller rat eller andet? 
+Lav en funktion, `vehicle_selector`, med mindst tre parametre
+- `num_wheels` - antallet af hjul
+- `has_motor` - har den en motor?
+- `steering` - har den styr eller rat - eller andet? 
 
 Funktionen analyserer argumenterne og returnerer en værdi, fx bil, motorcykel, cykel, knallert, ATV, lastbil.
 
@@ -135,11 +135,12 @@ Man returnerer en værdi med `return`.
 
 Hjælp: 
 ```
-def vehicle_selector(has_motor, num_wheels, wheel_type, color):
-  type = ""
+vehicles = ["car", "mc", "bike", "scooter", "atv", "truck"]
 
-  # do this if it has more than 2 wheels
-  if number_wheels > 2:
+def vehicle_selector(num_wheels, has_motor, steering):
+  type = ""
+  # do this if it has 2 wheels
+  if num_wheels == 2:
     type = osv
   # etc. 
   return type
