@@ -518,7 +518,7 @@ Igen er rækkefølgen vigtig: Reglen er at parametre med default-værdier skal k
 Dette går ikke:
 ```python
 def animals_greeting(first_animal = "cat", second_animal, greeting):
-    # define function here
+    # ( ... )
 
 SyntaxError: parameter without a default follows parameter with a default
 ```
@@ -559,7 +559,7 @@ return_value = pretty_print("This is Public Service Announcement")
 
 print(f"Returværdi: {return_value}")
 --
-None
+Returværdi: None
 ```
 
 
@@ -615,12 +615,114 @@ Se også [denne tråd på StackExchange](https://softwareengineering.stackexchan
 Jeg foretrækker den første løsning.
 
 
-## Import af biblioteker
+## Standardbiblioteket
+Python bliver leveret med et [standardbibliotek](https://docs.python.org/3/library/index.html).
 
-### Import
-I store programmer vil man opdele koden i flere filer som man så _importerer_ i sit hovedprogram. Hvis man gerne vil bruge sin indkøbsliste-kode, kan man importere en fil således:
+Lad os se på et par stykker.
+
+``` python
+os: For interacting with the operating system.
+sys: For accessing system-specific parameters and functions.
+math: For mathematical operations, such as trigonometry and logarithms.
+random: For generating random numbers and sequences.
+datetime: For working with dates and times.
+json: For encoding and decoding JSON data.
+```
+
+Alle disse biblioteker eller _moduler_ indeholder nyttige funktioner, som man ofte har brug for.
+
+Så hvis vi fx har brug for et tilfældigt tal, så importerer vi `random` - og det gør man altid som det første. Det vil sige at man begynder filen med sine `import`-statements.
+``` python
+import random # hent tilfældighedsmodulet
+
+coin_sides = ['plat', 'krone']
+result = random.choice(coin_sides) # random.choice() giver tilfældig side
+print(result)
+```
+
+Et andet rigtig godt eksempel er tid og dato. 
+
+For at få adgang til de indbyggede tid- og datofunktioner _importerer_ man `datetime`. 
+
+``` python
+import datetime # importer Pythons tidsbibliotek
+
+# datetime har en række funktioner, 
+# fx tiden lige nu ...
+now = datetime.datetime.now()
+print("Current time:", now) # Current time: 2024-09-10 06:59:26.537157
+
+# eller dagens dato
+today = datetime.date.today()
+print("Today's date:", today) # Today's date: 2024-09-10
+```
+ Man kan også oprette sine egne datoer eller tidspunkter.
+``` python
+# Opret en dato
+specific_date = datetime.date(2024, 11, 24)
+print("My specific date:", specific_date)
+
+# Opret et tidspunkt
+specific_time = datetime.time(13, 30, 0)
+print("My specific time:", specific_time)
+```
+
+Med modulet `os` (Operating System) kan man få fat i filsystemet, altså de omgivelser som Python lever i på computeren. Vi kunne godt tænke os at læse data fra en fil - så skal vi bruge `import os`.
+
+``` python
+import os
+
+with open("data.txt", 'r') as f:
+    contents = f.read()
+    print(contents)
+```
+Prøv det på din egen maskine.
+
+Eller hvad med en liste af alle filer i den mappe som vi befinder os i?
+``` python
+import os
+
+directory = os.getcwd()
+for item in os.listdir(directory):
+    if os.path.isdir(item):
+      print(f"{item} (directory)")
+    else:
+      print(f"{item} (file)")
+```
+Prøv det på din egen maskine. 
+
+### Import af egne moduler
+Man kan også importere sine egne moduler. I store programmer vil man ofte opdele koden i flere filer som man så importerer i sit hovedprogram. Hvis man gerne vil bruge sin indkøbsliste-kode, kan man importere en fil således:
 ```
 import grocery-list
 ```
+Det er nemt nok. 
 
-Det kræver at python ved hvor koden ligger.
+
+Men hvad hvis den funktionalitet som man skal bruge ikke findes i pythons standardmoduler? Det kigger vi på nu.
+
+### Brug af andres moduler
+
+Hvad med internettet? Kan man ikke få fat i det? Lad os se om der er et modul til det.
+
+Et meget populært modul til at lave http-forespørgsler er `requests`.
+Se https://pypi.org/project/requests/.
+
+``` python
+import requests
+
+url = "https://api.dataforsyningen.dk/adgangsadresser"
+params= {"vejnavn": "Slotshaven", "husnr": "1", "struktur": "mini"}
+data = requests.get(url, params).json()
+for item in data:
+    for key, value in item.items():
+        if (key == 'betegnelse'):
+            print("Adresse: ",  value) 
+
+# Adresse:  Slotshaven 1, 4200 Slagelse
+# Adresse:  Slotshaven 1, 4300 Holbæk
+```
+Vi har netop stillet en forespørgsel til Danmarks offentlige data og fået et svar. Læs mere hos [dataforsyningen.dk](https://dawadocs.dataforsyningen.dk/dok/api/adgangsadresse#s%C3%B8gning). Der er åbenbart også en Slotshaven i Slagelse _of all places_.
+
+Men før det virker, skal man først installere modulet `requests`. 
+Det er ikke et af standardmodulene - så hvor kom det modul fra? 
