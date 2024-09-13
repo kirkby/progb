@@ -10,6 +10,7 @@ Kode til [Grocery list manager](grocery_list.py)
 
 Mit forslag til [forbedringer af Grocery List Manager](my_grocery_list.py)
 
+Eksempel på funktion med kommentarer: [calculate_age](function-calculate-age.py)
 
 [Afleveringsopgave til første forløb](afleveringsopgave.md)
 
