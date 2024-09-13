@@ -2,5 +2,5 @@
 
 Materiale til første forløb i faget Programming B.
 
-(Introduktion til python)[f1-1-introdution.md]
+[Introduktion til python](f1-1-introdution.md)
 
