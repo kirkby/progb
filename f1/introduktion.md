@@ -724,5 +724,5 @@ for item in data:
 ```
 Vi har netop stillet en forespørgsel til Danmarks offentlige data og fået et svar. Læs mere hos [dataforsyningen.dk](https://dawadocs.dataforsyningen.dk/dok/api/adgangsadresse#s%C3%B8gning). Der er åbenbart også en Slotshaven i Slagelse _of all places_.
 
-Men før det virker, skal man først installere modulet `requests`. 
-Det er ikke et af standardmodulene - så hvor kom det modul fra? 
+Men før det virker, skal man først installere modulet `requests`. Det er ikke et af standardmodulene - så hvor kom det modul fra? 
+Det installerer vi fra 

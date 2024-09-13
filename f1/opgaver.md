@@ -146,6 +146,8 @@ def vehicle_selector(num_wheels, has_motor, steering):
   return type
 ```
 
+### Opgave 8
+
 
 
 
