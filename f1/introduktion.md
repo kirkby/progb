@@ -5,7 +5,7 @@ Programmering B, 2.r, Slotshaven Gymnasium 2024-25.
 Vi bruger Python til at lære programmering.  
 Python 3.1.12 er den nuværende version.
 
-## Forløb 1: Oversigt
+## Oversigt
 Vi skal lære om:
 
 - indrykning (indentation)
@@ -63,6 +63,16 @@ python3 mit-program.py
 ```
 Her afvikler python programmet i filen og stopper derefter.
 En typisk fejl er at glemme om man befinder sig "inde i python" eller udenfor.
+
+## Indrykning (indentation)
+Python adskiller sig fra de fleste andre programmeringssprog ved IKKE at anvende krølleparenteser eller semikolon til at adskille blokke. 
+``` php
+functioni = 10; 
+
+```
+
+
+
 
 ## Variabler
 Hvad er en variabel? Vi kender dem måske fra matematik, når vi beregner resultat af en funktion.
