@@ -8,7 +8,7 @@ Python 3.1.12 er den nuværende version.
 ## Oversigt
 Vi skal lære om:
 
-- indrykning (indentation)
+- syntaks
 - blokke
 - simple datatyper som heltal, tekst og sand-falsk
 - simple test som if, if-else og if-elif-else
@@ -61,30 +61,68 @@ Her afvikler python programmet i filen `min-app.py` og stopper derefter.
 
 En typisk fejl er at glemme om man befinder sig i _interactive mode_ eller udenfor.
 
-### Syntaks
-Python har en lidt speciel syntaks, sammenlignet med mange andre programmeringssprog. Det tilhører nemlig familien af sprog som anvender [_significant whitespace_](https://en.wikipedia.org/wiki/Off-side_rule). Det vil sige, at man bruger indrykning (_indendation_) til at afgrænse blokke af kode fra hinanden, og linjeskift til at adskille linjer (eller mere præcist: statements) fra hinanden.  
-Dette er i modsætning til mange andre programmeringssprog som anvender bestemte tegn, fx krølleparenteser (_tuborg-klammer_) `{}` og semikolon `:`, til at adskille blokke og linjer.
+## Syntaks
+Python har en lidt speciel syntaks, sammenlignet med mange andre programmeringssprog. Det tilhører nemlig familien af sprog som anvender [_significant whitespace_](https://en.wikipedia.org/wiki/Off-side_rule). 
 
-Sammenlign fx javascript
+Dette er i modsætning til mange andre programmeringssprog som anvender bestemte tegn, fx krølleparenteser  `{}` (som også kaldes _Tuborg-klammer_}, til at adskille blokke.
+
+### Indrykning
+Python bruger udelukkende **indrykning** (_indentation_) til at afgrænse blokke af kode fra hinanden. 
+
+For at definere en blok kode sætter man et kolon og rykker næste linje ind med **4 mellemrum**.
+Alle linjer, der følger herefter og har samme indrykning, tilhører samme blok. 
+
+``` python
+1: x, y, swap = 10, 5, True
+2: if swap:  # samme blok 2-5
+3:     i = x 
+4:     x = y 
+5:     y = i 
+6: i = 0 # anden blok
+```
+Hvorfor er det vigtigt om to linjer kode tilhører samme blok? Jo, fordi kode der tilhører samme blok, _altid eksekveres sammen_. Det er umuligt at læse og forstå kode, hvis man ikke forstår hvilke linjer der hører sammen i hvilke blokke.
+
+Bemærk i øvrigt det afsluttende **kolon** `:` på første linje i blokken. Det har ingen anden funktion (så vidt vides) end at gøre det nemmere at læse - det betyder altså "her begynder en blok". Næste linje **skal** altså være indrykket, hvis linjen slutter med kolon.
+
+Det samme gælder funktioner som også er en slag blokke. Sammenlign fx definitionen af en funktion i javascript
 
 ``` javascript
 function greet(name) { 
     console.log("Hello, " + name + "!"); 
 }
-i = 10;
+i = 10; // Tilhører ikke funktionen
 ```
 med python
 ``` python
 def greet(name): # kolon = her begynder blok
-....print("Hello, " + name + "!") # .... = 4 mellemrum, linje afsluttes med linjeskift
+    print("Hello, " + name + "!") # 4 mellemrum, tilhører funktionen
+i = 10 # Tilhører ikke funktionen 
+```
+VS Code sørger som regel for at indrykningen sker automatisk når man arbejder med `.py`-filer. 
 
-i = 10 # ikke en del af blokken
+Standarden med netop 4 mellemrum som indrykning er _best practice_. I virkeligheden er python ligeglad - sålænge linjerne har samme indrykning, hører de sammen. 
+
+### Linjeskift
+Tilsvarende er linjeskift også vigtige (syntaktisk signifikante) - hvilket også er forskelligt fra fx javascript og C#.
+**I Python kan man afslutte et statement med et linjeskift** - uden semikolon. 
+
+Linjeskift indikerer ny statement.
+``` python
+first_name = "Peter"
+last_name = "Nielsen"
+full_name = first_name + " " + last_name
 ```
 
-Som **standard** i python rykker man næste linje ind med **4 mellemrum** hvis det er samme blok. Som regel sørger VS Code for at det sker automatisk når man arbejder med `.py`-filer. Bemærk i øvrigt også det afsluttende **kolon** `:` på første linje i blokken. Det har ingen anden funktion (så vidt vides) end at gøre det nemmere at læse - det betyder altså "her begynder en blok".
+Det samme kunne skrives med semikolon ...
+``` python
+first_name = "Peter"; last_name = "Nielsen"; full_name = first_name + " " + last_name
+```
+... men lad være med! Det er ikke _pythonic_ - det er altså imod ånden i python.
 
+### Opsummering
+Vi har i det foregående brugt begreberne linjer og blokke uden rigtigt at definere dem helt præcist. Hvis du ikke er helt sikker på, at du forstår disse begreber endnu, gør det ikke noget.   
+Det vigtigste er, at du grundlæggende ved hvordan man skal forstå pythons særlige syntaks - altså ved hvordan man læser koden.
 
-Det kan tage noget tid at vænne sig til dette. 
 
 ## Variabler
 Hvad er en variabel? Vi kender dem måske fra matematik, når vi beregner resultat af en funktion.
@@ -207,7 +245,7 @@ else:
 Tænk over hvorfor test 1 og 2 bør skifte rækkefølge.
 
 
-## Loops med range()
+## Loops
 
 Funktionen [`range()`](https://docs.python.org/3.12/tutorial/controlflow.html#the-range-function) er et loop, altså en kontrolstruktur som udfører en løkke. 
 Den gentager altså blokken der følger efter så mange gange som man beder den om. 
