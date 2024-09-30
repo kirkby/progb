@@ -455,18 +455,6 @@ fib(25) # calling fib()
 Funktioner anvendes som sagt til afgrænsede, enkeltstående opgaver.
 Nogle kloge folk siger, at som udgangspunkt skal man kunne overskue hele funktionen i et skærmbillede. 
 
-### Dokumentation af funktioner
-Der findes en Python-standard til dokumentation af funktioner.
-En 1-linjes tekst lige under funktionshovedet. Fx kunne vores fibonacci-funktion dokumenteres sådan her: 
-
-``` python
-def fib(limit):
-    """Print a Fibonacci series up to limit."""
-    a, b = 0, 1
-    (...)
-```
-
-
 
 ### Mere om parametre
 En funktion kan selvfølgelig have mere end et parameter. Faktisk kan en funktion have et stort set uendeligt antal parametre. 
@@ -492,8 +480,10 @@ def say_hello(greeting, title, name):
     print(f"Sig {greeting} til {title} {name}") # Sig Hej til hr. Jensen
 ```
 
-### Parametre eller argumenter? 
-En funktion har altså _parametre_. Et _argument_ er den værdi som man _kalder_ funktionen med.
+Udover parametre taler man også om _argumenter_. 
+
+Et _argument_ er den værdi som man _kalder_ funktionen med - altså de konkrete værdier som parametrene får når funktionen kaldes.
+
 I eksemplet ovenfor er parametrene altså `greeting`, `title`, `name` - og "Hej", "hr.", "Jensen" de tre argumenter som funktionen bliver kaldt med.
 
 ### Default-værdier
@@ -607,6 +597,19 @@ Se også [denne tråd på StackExchange](https://softwareengineering.stackexchan
 
 
 Jeg foretrækker den første løsning.
+
+&#x24D8; Dokumentation af funktioner
+
+
+En 1-linjes tekst lige under funktionshovedet, fx kunne vores fibonacci-funktion dokumenteres sådan her: 
+
+``` python
+def fib(limit):
+    """Print a Fibonacci series up to limit."""
+    a, b = 0, 1
+    (...)
+```
+
 
 ## Standardbiblioteket
 Python bliver leveret med et [standardbibliotek](https://docs.python.org/3/library/index.html).
