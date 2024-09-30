@@ -1,4 +1,4 @@
-# Introduktion til Python
+ # Introduktion til Python
 
 Programmering B, 2.r, Slotshaven Gymnasium 2024-25.
 
@@ -24,9 +24,8 @@ Vi skal bruge følgende værktøjer og programmer:
 
 &#x24D8; **IDE** er et akronym for _Integrated Development Environment_. Altså, en kodeeditor, det program som vi skriver vores programmer i. Vi bruger VS Code som er en IDE fra Microsoft.
 
-&#x24D8; **CLI** betyder *command line interface* (altså kommandolinjegrænseflade) og er et andet meget brugt _TLA_.
+&#x24D8; **CLI** betyder *command line interface*, altså kommandolinjegrænseflade. 
 
-Joke: hvad er et [TLA](https://en.wikipedia.org/wiki/)?
 
 ### VS Code
 Som en snedker har sit træværktøj, har du din kodeeditor. Brug tid på at lære den at kende!  Se fx [denne video](
@@ -34,45 +33,58 @@ https://code.visualstudio.com/docs/introvideos/productivity) med tips og tricks.
 Eller [denne her](
 https://code.visualstudio.com/docs/introvideos/configure) om temaer.
 
-⚠️ Om et par måneder skal du som minimum kende denne genvej <kbd>Space</kbd> + <kbd>Ctrl</kbd> + <kbd>P</kbd> (Mac: <kbd>Shift</kbd> + <kbd>&#x2318;</kbd> + <kbd>P</kbd>) - den giver direkte adgang til ALT hvad man kan i VS Code. Prøv den nu.
+⚠️ Du bør som minimum kende genvejen <kbd>Space</kbd> + <kbd>Ctrl</kbd> + <kbd>P</kbd> (Mac: <kbd>Shift</kbd> + <kbd>&#x2318;</kbd> + <kbd>P</kbd>) - den giver direkte adgang til ALT hvad man kan i VS Code. Prøv den nu.
 
 ### Python CLI
-Når man arbejder med på kommandolinje, betyder det at man skriver kommandoer på en kommandolinje. 
-Eksempel: når vi skriver 
+Man kan arbejde med python på kommandolinjen på flere måder. 
 
+#### Interactive mode
+
+Hvis man skriver kommandoen `python3` i sit CLI, starter man python i _interactive mode_.
 ```
->python3 main.py
+$>python3
+Python 3.10.12 (main, Sep 11 2024, 15:47:36) [GCC 11.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 
 ```
 
-så arbejder vi med Python i CLI.
-
-De tegn som står i begyndelsen af linjen, fx `>>>`, kaldes i øvrigt en prompt. 
-
-Hvis man skriver 
-```
-python3
-```
-i sit CLI, starter man python og kan derefter "tale med" python. Så er man i _interactive mode_.
-Det kan ses på prompten som ser sådan ud: `>>>`. 
+Derefter kan man "tale interaktivt med" python. _Interactive mode_ kan ses på at prompten er tre vinkler: `>>>`. 
 
 For at afslutte "samtalen" skriv `quit()`.
 
+#### Afvikling af python-kode i py.filer
 Hvis man vil have python til at afvikle et program som man har gemt i en fil, skriver man 
 ```
-python3 mit-program.py
+python3 min-app.py
 ```
-Her afvikler python programmet i filen og stopper derefter.
-En typisk fejl er at glemme om man befinder sig "inde i python" eller udenfor.
+Her afvikler python programmet i filen `min-app.py` og stopper derefter.
 
-## Indrykning (indentation)
-Python adskiller sig fra de fleste andre programmeringssprog ved IKKE at anvende krølleparenteser eller semikolon til at adskille blokke. 
-``` php
-functioni = 10; 
+En typisk fejl er at glemme om man befinder sig i _interactive mode_ eller udenfor.
 
+### Syntaks
+Python har en lidt speciel syntaks, sammenlignet med mange andre programmeringssprog. Det tilhører nemlig familien af sprog som anvender [_significant whitespace_](https://en.wikipedia.org/wiki/Off-side_rule). Det vil sige, at man bruger indrykning (_indendation_) til at afgrænse blokke af kode fra hinanden, og linjeskift til at adskille linjer (eller mere præcist: statements) fra hinanden.  
+Dette er i modsætning til mange andre programmeringssprog som anvender bestemte tegn, fx krølleparenteser (_tuborg-klammer_) `{}` og semikolon `:`, til at adskille blokke og linjer.
+
+Sammenlign fx javascript
+
+``` javascript
+function greet(name) { 
+    console.log("Hello, " + name + "!"); 
+}
+i = 10;
+```
+med python
+``` python
+def greet(name): # kolon = her begynder blok
+....print("Hello, " + name + "!") # .... = 4 mellemrum, linje afsluttes med linjeskift
+
+i = 10 # ikke en del af blokken
 ```
 
+Som **standard** i python rykker man næste linje ind med **4 mellemrum** hvis det er samme blok. Som regel sørger VS Code for at det sker automatisk når man arbejder med `.py`-filer. Bemærk i øvrigt også det afsluttende **kolon** `:` på første linje i blokken. Det har ingen anden funktion (så vidt vides) end at gøre det nemmere at læse - det betyder altså "her begynder en blok".
 
 
+Det kan tage noget tid at vænne sig til dette. 
 
 ## Variabler
 Hvad er en variabel? Vi kender dem måske fra matematik, når vi beregner resultat af en funktion.
@@ -140,7 +152,7 @@ name = name.capitalize() # Anna
 &#x24D8; Datatyper er et MEGET vigtigt begreb i programmering, men det er også et meget stort emne så det vender vi tilbage til.
 
 
-## if og if-else og if-elif-else
+## Kontrolstruktur: if og if-else og if-elif-else
 
 `if` og dens varianter er måske den mest basale alle såkaldte kontrolstrukturer - den bestemmer hvilken 
 retning programmet skal løbe i. Det gør den ved at afgøre sandhedsværdien i en given test. 
@@ -227,7 +239,7 @@ Konklusion: `range()`-funktionen er praktisk hvis man på forhånd kender antall
 Der er andre typer loops - men først kigger vi lige på lister.
 
 ## Lister
-Lister er en helt grundlæggende struktur i programmering. I andre sprog kaldes de også _arrays_.
+Lister er en helt grundlæggende datastruktur i programmering. I andre sprog kaldes de også _arrays_.
 
 I python er der fire forskellige typer lister:
 - liste (_list_)
@@ -443,7 +455,7 @@ fib(25) # calling fib()
 Funktioner anvendes som sagt til afgrænsede, enkeltstående opgaver.
 Nogle kloge folk siger, at som udgangspunkt skal man kunne overskue hele funktionen i et skærmbillede. 
 
-### Dokumentation
+### Dokumentation af funktioner
 Der findes en Python-standard til dokumentation af funktioner.
 En 1-linjes tekst lige under funktionshovedet. Fx kunne vores fibonacci-funktion dokumenteres sådan her: 
 
@@ -473,7 +485,7 @@ say_hello('Hva så', 'der, ', 'mester') # Hva så der, mester
 
 ```
 
-Denne funktion kan synes lidt fjollet. Men det kunne faktisk være meget smart, hcis man senere besluttede sig for at ændre på den måde som man hilser på. Så ville man kun skulle ændre koden et sted. Vi kan fx gøre brug af Pythons indbyggede formateringsmuligheder:
+Dette eksempel kan synes lidt fjollet. Men denne funktion kunne faktisk være meget smart, hcis man senere besluttede sig for at ændre på den måde som man hilser på. Så ville man kun skulle ændre koden et sted. Vi kan fx gøre brug af Pythons indbyggede formateringsmuligheder:
 
 ``` python
 def say_hello(greeting, title, name):
@@ -483,34 +495,6 @@ def say_hello(greeting, title, name):
 ### Parametre eller argumenter? 
 En funktion har altså _parametre_. Et _argument_ er den værdi som man _kalder_ funktionen med.
 I eksemplet ovenfor er parametrene altså `greeting`, `title`, `name` - og "Hej", "hr.", "Jensen" de tre argumenter som funktionen bliver kaldt med.
-
-### Position eller keyword?
-Det ses i eksemplet, at rækkefølgen er vigtig. 
-Disse to funktionskald er ikke ens - prøv selv:
-
-``` python
-say_hello("Hej", "hr.", "Jensen")
-say_hello("Jensen", "hej", "hr")
-```
-Det er fordi argumenterne er _positionelle_, altså rækkefølgen er afgørende.
-Det kan man faktisk komme uden om ved at navngive sine argumenter efter parametrene: 
-
-``` python
-say_hello(name = "Jensen", greeting = "hej", title = "hr")
-```
-Det kaldes _keyword_-argumenter, eller navngivne argumenter. Det har måske ikke den store praktiske betydning lige nu. Men man skal være opmærksom på reglerne.
-
-Kombinationer af positionelle og navngivne argumenter kan hurtigt give problemer.
-``` python
-say_hello("Jensen", greeting = "hej", title = "hr")
-
-TypeError: say_hello() got multiple values for argument 'greeting'
-```
-Eller
-``` python
-say_hello(name = "Jensen", greeting = "hej", "hr")
-SyntaxError: positional argument follows keyword argument
-```
 
 ### Default-værdier
 Noget mere interessant er måske default-værdier for parametre.
@@ -624,9 +608,9 @@ Se også [denne tråd på StackExchange](https://softwareengineering.stackexchan
 
 Jeg foretrækker den første løsning.
 
-
 ## Standardbiblioteket
 Python bliver leveret med et [standardbibliotek](https://docs.python.org/3/library/index.html).
+Standardbiblioteket er altid tilgængeligt i python.
 
 Lad os se på et par stykker.
 
@@ -711,9 +695,10 @@ Det er nemt nok.
 
 Men hvad hvis den funktionalitet som man skal bruge ikke findes i pythons standardmoduler? Det kigger vi på nu.
 
-### Brug af andres moduler
+### Eksterne moduler
+De fleste moduler skal man dog selv installere før man kan bruge dem. Disse moduler henter man i [PYPI](https://pypi.org/) - The Python Package Index. 
 
-Hvad med internettet? Kan man ikke få fat i det? Lad os se om der er et modul til det.
+Lad os tage et eksempel - hvad med internettet? Kan man ikke få fat i det? Lad os se om der er et modul til det.
 
 Et meget populært modul til at lave http-forespørgsler er `requests`.
 Se https://pypi.org/project/requests/.
