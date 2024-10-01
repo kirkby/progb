@@ -79,7 +79,7 @@ Beskriv med egne ord mindst 2 andre strukturer af samme slags i Python.
 ## Opgave 3
 
 ### 3.1
-Aflever en kommenteret udgave af jeres besvarelse af [opgave 7](https://github.com/kirkby/progb/blob/main/f1/f1-opgaver.md#opgave-7).  
+Aflever en kommenteret udgave af jeres besvarelse af [opgave 7](https://github.com/kirkby/progb/blob/main/f1/opgaver.md#opgave-7).  
 Kommenteret vil sige at I indsætter kommentarer i koden (med `#` fx) som  forklarer hvad koden gør.  
 I skal også dokumentere funktionen med en _docstring_. 
 Eksempel på docstring:
