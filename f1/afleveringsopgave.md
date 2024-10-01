@@ -1,8 +1,6 @@
 # Afleveringsopgave
 Programmering B, 2024-2025.  
-Hold 2r.  
-mkm@slotshaven.dk
-
+Hold 2r.
 
 Afsluttende aflevering for forløb 1.  
 Individuel aflevering.  

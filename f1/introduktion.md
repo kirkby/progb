@@ -1,6 +1,8 @@
  # Introduktion til Python
 
-Programmering B, 2.r, Slotshaven Gymnasium 2024-25.
+Programmering B
+Hold 2.r
+2024-25.
 
 Vi bruger Python til at lære programmering.  
 Python 3.1.12 er den nuværende version.
