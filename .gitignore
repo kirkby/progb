@@ -1,1 +1,8 @@
+# system  and python files
 .DS_Store
+__pycache__
+.venv/
+
+# exclude
+web/
+aflevering2
