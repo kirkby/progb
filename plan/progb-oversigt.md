@@ -22,7 +22,7 @@ Tilrettelæggelse:
 - øvelser
 - projekter
 
-"Der veksles mellem ovebliksskabende forløb, eksperimenter, øvelser, og projekter."
+"Der veksles mellem overbliksskabende forløb, eksperimenter, øvelser, og projekter."
 
 Det fremhæves at en programmør arbejder i iterative faser:
 - design
@@ -110,5 +110,4 @@ https://www.youtube.com/watch?v=7_LPdttKXPc
 ### VS Code
 Som en snedker har værktøj, har du din kodeeditor. Brg tid på at lære den at kende. Se fx [denne video](
 https://code.visualstudio.com/docs/introvideos/productivity) med tips og tricks.
-Eller [denne her]
-https://code.visualstudio.com/docs/introvideos/configure) om temaer.
+Eller [denne her]https://code.visualstudio.com/docs/introvideos/configure) om temaer.
