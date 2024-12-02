@@ -1,2 +1,2 @@
-# progb
-Materiale til faget Programming B på Slotshaven Gymnasium.
+# Programmering B
+Al materiale er under udarbejdelse og opdateres løbende.
