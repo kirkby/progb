@@ -17,6 +17,7 @@ Husk at beskrive de anvendte symboler.
 
 - Pseudo-kode  
 Beskrivelse af en __central__ algoritme af spillet med pseudo-kode.
+Eksempler på centrale algoritmer: tyngdekraft eller kollision.
 
 - Evaluering  
 En kort evaluering af spillet, inkl. testresultater og et skærmbillede.
