@@ -3,6 +3,3 @@
 __pycache__
 .venv/
 
-# exclude
-web/
-aflevering2
