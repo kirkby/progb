@@ -4,8 +4,8 @@ Al materiale opdateres løbende.
 HTX Valgfag.
 
 ## Indhold
-(Pensum)[pensum.md] - oversigt over pensum for året  
-(Studieplan)[studieplan.md] - kort resume af studieplanen i lectio
+[Pensum](pensum.md) - oversigt over pensum for året  
+[Studieplan](studieplan.md) - kort resume af studieplanen i lectio
 
 Materialer til de enkelte forløb findes her:   
 [1. Introduktion](1-introduktion.md)  
