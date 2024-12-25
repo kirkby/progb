@@ -20,5 +20,11 @@ Materialer til de enkelte forløb findes her:
 /[materiale](/materiale)- mappe med materialer til undervisningen
 
 
+## TODO
+- [ ] Studieplan gøres færdig
+- [ ] Pensum gøres færdig
+- [ ] Opdater studiplan i lectio
+- [ ] Flyt materialer fra progb-oversigt til ny struktur
+
 
 
