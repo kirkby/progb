@@ -1,6 +1,8 @@
 # Læreplan for Programmering B 
 Med udgangspunkt i programmeringssproget python (v 3.1).
 
+Se også [Studieplan](studieplan/0-studieplan.md).
+
 ## 1. Introduktion og opsætning
     1.1 Installation
     1.2 VS Code

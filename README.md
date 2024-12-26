@@ -3,7 +3,7 @@ Al materiale opdateres løbende.
 2024-25 HTX Valgfag.
 
 ## Indhold
-[Pensum](pensum.md) - oversigt over pensum for året  
+[Læreplan](laereplan.md) - oversigt over læreplanen for faget  
 [Studieplan](studieplan/0-studieplan.md) - kort resume af studieplanen i lectio
 
 Materialer til de enkelte forløb findes her:   
@@ -21,9 +21,9 @@ Materialer til de enkelte forløb findes her:
 
 ## TODO
 - [ ] Studieplan gøres færdig
-- [ ] Pensum gøres færdig
 - [ ] Opdater studieplan i lectio
 - [ ] Flyt materialer fra progb-oversigt til ny struktur
+- [X] Pensum gøres færdig
 
 
 

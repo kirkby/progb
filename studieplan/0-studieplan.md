@@ -4,6 +4,7 @@ Udarbejdet er forløb for 2.g.
 Undervisningsprog er python.  
 Samlet antal moduler er 65.  
 Undervisningen er struktureret i 5 forløb.  
+Se også læreplanen.
 
 ## Forløb 1: Introduktion til programmering med Python
 [Materialer og lektioner for forløbet](1-introduktion.md)
