@@ -80,6 +80,8 @@ Arbejdsgange, fejlfinding og test.
 
  ”I den afsluttende periode af undervisningen afsættes 20 timers undervisningstid til, at eleverne med vejledning fra læreren udarbejder et eksamensprojekt i grupper på to til tre. Hvor dette ikke er muligt eller ønskeligt, kan man lade eleverne arbejde individuelt. Eksamensprojektet består af et produkt og en synopsis. Synopsen skal dokumentere udviklingen af det færdige produkt og har et omfang på 5-8 normalsider, eksklusiv koder, rutediagrammer, bilag mm”
 
+Traditionelt lægges dette forløb tidligt i forårssemesteret hensyn til de afsluttende fag og eksamensplanlægningen.
+
 ### Omtrentligt omfang
 20 moduler.  
 Perioden fra nytår til vinterferie/marts.  
