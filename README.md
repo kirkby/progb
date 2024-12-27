@@ -1,6 +1,6 @@
 # Programmering B
 Al materiale opdateres løbende.  
-2024-25 HTX Valgfag.
+2024-25 HTX, Studieretningsfag.
 
 ## Indhold
 [Læreplan](laereplan.md) - oversigt over læreplanen for faget  
@@ -22,8 +22,8 @@ Materialer til de enkelte forløb findes her:
 ## TODO
 - [ ] Studieplan gøres færdig
 - [ ] Opdater studieplan i lectio
-- [ ] Flyt materialer fra progb-oversigt til ny struktur
-- [X] Pensum gøres færdig
+- [X] Flyt materialer fra progb-oversigt til ny struktur
+- [X] Læreplan gøres færdig
 
 
 

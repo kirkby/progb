@@ -1,8 +1,8 @@
 # Studieplan for Programmering B
-Studieplan for valgfaget Programmering B på HTX.  
+Studieplan for studieretningsfaget Programmering B på HTX.  
 Udarbejdet er forløb for 2.g.  
 Undervisningsprog er python.  
-Samlet antal moduler er 65.  
+Samlet antal moduler er 63.  
 Undervisningen er struktureret i 5 forløb.  
 Se også læreplanen.
 
