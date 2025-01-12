@@ -9,21 +9,16 @@ class Pet:
     def get_breed(self):
         print(f"{self.name} er en {self.breed}")
 
-    # def get_pet(self):
-    #     print(f"{self.name} er en {self.id
-    # def get_pet(self):
-    #     print(f"{self.name} er en {self.id}")
-
-
 class Dog(Pet):
-    id = "dog"
+    sound = "vov"
+    def __init__(self, name, breed, function):
+        self.function = function
+        super().__init__(name, breed)
 
     def sound(self):
-        print(f"{self.name} siger vov!")
+        print(f"{self.name} siger {self.sound}!")
 
 
 class Cat(Pet):
-    id = "cat"
-
     def sound(self):
         print(f"{self.name} siger mjau!")

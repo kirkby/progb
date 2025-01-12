@@ -1,4 +1,4 @@
-from dog import Pet, Dog, Cat
+from eksempler.pet import Pet, Dog, Cat
 
 # import dog
 dog = Dog("Fido", "Golden Retriever")
