@@ -54,6 +54,15 @@ pet = Pet("Charlie", 4)
 print(pet.describe())  # Output: Charlie er 4 år gammel.
 ```
 
+### Dunder
+`__init__` er en såkaldt double underscore-metode - bedre kendt som *dunder* metoder. Dem findes der mange af.
+
+```python
+print(d.__dict__)
+
+# {'breed': 'Golden Retriever', 'dog_type': 'familiehund', 'name': 'Fido', 'age': 2, 'random_attribute': 'Dette er en tilfældig attribut'}
+```
+
 ### Subklasser og nedarvning
 Med subklasser kan vi genbruge og udvide funktionaliteten af en eksisterende klasse. Subklasser nedarver alle attributter og metoder fra superklassen.
 
@@ -115,3 +124,10 @@ print(dog.speak())  # Output: Vuf!
 - **Subklasser** tillader genbrug og udvidelse af funktionalitet fra en superklasse.
 - **Overrides** giver mulighed for at tilpasse funktionaliteten i subklasser.
 
+
+
+## Materialer
+**Dave Ebbelaar**
+God introduktion på github: https://github.com/daveebbelaar/ai-fundamentals/blob/main/classes/README.md
+
+Video: https://www.youtube.com/watch?v=u4Ryk0YuW6A  
