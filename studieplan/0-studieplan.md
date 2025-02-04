@@ -5,6 +5,7 @@ Undervisningsprog er python.
 Samlet antal moduler er 63.  
 Undervisningen er struktureret i 5 forløb.  
 Se også læreplanen.
+Se også [materialeliste](materiale.md)
 
 ## Forløb 1: Introduktion til programmering med Python
 [Materialer og lektioner for forløbet](1-introduktion.md)
@@ -12,6 +13,7 @@ Se også læreplanen.
 Installation af python og programmeringsværktøjer.
 Opsætning af udviklingsmiljø. og introduktion til IDE som værktøj.
 Introduktion til grundlæggende begreber i programmering, med udgangspunkt i python.
+Udlevering af cheatsheets til inspiration og opslag.
 
 ### Omtrentligt omfang
 12 moduler.  
@@ -64,6 +66,11 @@ Introduktion til sprites som middel til indkapsling og modularisering.
 Introduktion til metoder og værktøjer som opgavenedbrydning, pseudokode og rutediagrammer.  
 Anvendelse af LLM-værktøjer til kodegenerering.  
 Prompting-strategier.
+
+Introduktion til OOP og klasser, herunder construkturs, this, metoder, attributter, nedarvning og overrides.
+
+Eleverne løser desuden opgaverne på Khan Academys python-kursus for at træne basale færdigheder:
+https://en.khanacademy.org/computing/intro-to-python-fundamentals
 
 ### Omtrentligt omfang
 12 moduler.  

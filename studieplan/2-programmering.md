@@ -1,5 +1,7 @@
 # Forløb 2: Programmering med Python
 
+Under udarbejdelse.
+
 ## Materialer
 Videoer fra Microsofts youtube-kanal: 
 
