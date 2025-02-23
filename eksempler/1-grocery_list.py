@@ -1,5 +1,32 @@
-grocery_list = []
+from grocery_list import GroceryList
 
+grocery_list = []
+grocery_list = GroceryList()
+
+while True:
+    print("Choose an action:")
+    print("1. Add to list")
+    print("2. Remove from list")
+    print("3. Print list")
+    print("4. Quit")
+
+    choice = input("Enter your choice: ")
+
+    if choice == "1":
+        item = input("Enter the item to add: ")
+        item_count = int(input("Enter the number of items to add: "))
+        grocery_list.add_item(item, item_count)
+    elif choice == "2":
+        item = input("Enter the item to remove: ")
+        item_count = int(input("Enter the number of items to remove: "))
+        grocery_list.remove_item(item, item_count)
+    elif choice == "3":
+        grocery_list.print_list()
+    elif choice == "4":
+        print("Exiting...")
+        break
+    else:
+        print("Invalid choice. Please try again.")
 while True:
     print("Choose an action:")
     print("1. Add to list")

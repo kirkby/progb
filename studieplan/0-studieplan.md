@@ -10,10 +10,10 @@ Se også [materialeliste](materiale.md)
 ## Forløb 1: Introduktion til programmering med Python
 [Materialer og lektioner for forløbet](1-introduktion.md)
 
-Installation af python og programmeringsværktøjer.
-Opsætning af udviklingsmiljø. og introduktion til IDE som værktøj.
-Introduktion til grundlæggende begreber i programmering, med udgangspunkt i python.
-Udlevering af cheatsheets til inspiration og opslag.
+Installation af python og programmeringsværktøjer.  
+Opsætning af udviklingsmiljø. og introduktion til IDE som værktøj.  
+Introduktion til grundlæggende begreber i programmering, med udgangspunkt i python.  
+Udlevering af cheatsheets til inspiration og opslag.  
 
 ### Omtrentligt omfang
 12 moduler.  
