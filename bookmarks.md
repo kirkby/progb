@@ -1,9 +1,13 @@
 # Bogmærker for Programmering B
-TODO
+TODO!
 
 ## Materialer og artikler
 
-## Video
+## Git 
+[VS Codes Youtube-playlist om git i VS Code](https://youtube.com/playlist?list=PLj6YeMhvp2S7abEHqkUPRkCSt4N2wpTwD)
+
+Det anbefales at begynde med denne her: Using Git with Visual Studio Code (Official Beginner Tutorial).
+
 
 ## Inspiration til faget
 [Link](https://inspiration.dk)
