@@ -8,6 +8,8 @@ TODO!
 
 Det anbefales at begynde med denne her: Using Git with Visual Studio Code (Official Beginner Tutorial).
 
+Git forklaret til et barn. 
+[Git Tutorial For Dummies](https://youtu.be/mJ-qvsxPHpY)
 
 ## Inspiration til faget
 [Link](https://inspiration.dk)
